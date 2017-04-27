@@ -8,7 +8,7 @@
 
 4. Next, you'll have to get the `app.js` file fleshed out. Refer to today's lecture. **It's very important to keep track of what you're naming the files and where you put them. Then what you `export` things as and what you `require` them as, i.e. making sure the names match up. That's one goal of this lab, to get practice with exporting and requiring. It's fine if you don't get the app working. This is your first attempt!
 
-** warning, for the following steps you'll need to create the files (for the routes, controller, and model), refer to the quotes app!**
+**warning, for the following steps you'll need to create the directories (routes, models, controllers) and the files (for the routes, controller, and model), refer to the quotes app!**
 
 5. Next, get the basic routes down for viewing all movies. Then try to get the controller part of that puzzle in place, and finally flesh out the model. Try to get to the point such that when you navigate to `/movies`, it displays all movies.
 
