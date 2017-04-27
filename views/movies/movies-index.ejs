@@ -1,0 +1,18 @@
+<% include ../partials/boilerplate %>
+
+<a href='/movies/add'>Add a movie!</a>
+
+<div class='movies'>
+  <% moviesData.forEach(function(movie, index) { %>
+    <div>
+      <h3><%= movie.title %></h3>
+      <div>
+        <span><%= movie.release_year %></span>
+        <span><%= movie.director %></span>
+      </div>
+      <a href='/movies/<%= index + 1 %>'>Go to page</a>
+    </div>
+  <% }) %>
+</div>
+
+<% include ../partials/end %>
