@@ -17,6 +17,14 @@
   ],
   "license": "ISC",
   "dependencies": {
-
-  }
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "nodemon": "^1.11.0",
+    "pg-promise": "^6.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:aileenmwong/full-crud-express-mvc-movies.git"
+  },
+  "author": ""
 }

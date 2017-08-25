@@ -1,4 +1,4 @@
-/* the db config is all set, but pay attention what db you bneed to create */
+/* the db config is all set, but pay attention what db you need to create */
 
 const pgp = require('pg-promise')();
 
