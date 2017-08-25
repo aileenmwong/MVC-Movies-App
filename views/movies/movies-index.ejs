@@ -1,2 +1,13 @@
 <%# as the filename states, this view should render the `index` movie template that lists all movies in the database! %>
 <%# make sure each movie has a button to be deleted from the databse %>
+
+<a href="/movies/movies-add">Add movie</a>
+<% for (let movies of data) { %>
+<div class = 'movie'>
+  <h1><%= movies.title %><h1>
+  <a href = '/movies/<%= movies.id%>'>Learn more</a>
+</div>
+<form action="/movies/<%= movies.id %>?_method=Delete " method="Post">
+  <input type="Submit" value="Delete"/>
+  </form>
+<% } %>

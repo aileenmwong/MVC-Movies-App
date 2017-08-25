@@ -5,7 +5,7 @@ const moviesController = {};
 moviesController.index = (req, res) => {
   Movie.findAll()
   .then(movies => {
-    res.json({
+    res.render('movies/movies-index', {
       message: 'ok',
       data: movies,
     });
@@ -18,7 +18,7 @@ moviesController.index = (req, res) => {
 moviesController.show = (req, res) => {
   Movie.findById(req.params.id)
   .then(movies => {
-    res.json({
+    res.render('movies/movies-single', {
       message: 'ok',
       data: movies,
     });
@@ -34,13 +34,9 @@ moviesController.create = (req, res) => {
     release_year: req.body.release_year,
     director: req.body.director,
   })
-  .then(movies => {
-    res.json({
-      message: 'Movie added successfully!',
-      data: movies,
-    });
-  })
-  .catch(err => {
+  .then(() => {
+    res.redirect('/movies');
+  }).catch(err => {
     res.status(500).json(err);
   });
 };
@@ -64,10 +60,8 @@ moviesController.update = (req, res) => {
 moviesController.delete = (req, res) => {
   Movie.delete(req.params.id)
   .then(() => {
-    res.json({
-      message: 'Movie deleted successfully!',
-    });
-  }).catch(err => {
+    res.redirect('/movies');
+    }).catch(err => {
     console.log(err);
     res.status(500).json(err);
   });
