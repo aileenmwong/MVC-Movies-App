@@ -1,4 +1,2 @@
-DROP DATABASE IF EXISTS intro_movies_db;
-CREATE DATABASE intro_movies_db;
-\connect intro_movies_db;
+\connect movies_db_dev;
 \i movies.sql;

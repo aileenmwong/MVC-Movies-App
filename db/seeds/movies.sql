@@ -1,11 +1,3 @@
-CREATE TABLE movies (
-  id serial PRIMARY KEY,
-  title varchar(255) NOT NULL,
-  release_year integer,
-  director varchar(255),
-  awards varchar(255)
-);
-
 INSERT INTO movies (title, release_year, director) VALUES
   (
     'Birdman',

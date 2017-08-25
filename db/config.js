@@ -1,16 +1,18 @@
+/* the db config is all set, but pay attention what db you bneed to create */
+
 const pgp = require('pg-promise')();
 
 let db;
 
 if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
   db = pgp({
-    database: 'intro_movies_db',
+    database: 'movies_db_dev',
     port: 5432,
     host: 'localhost'
   });
 } else if (process.env.NODE_ENV === 'production') {
   db = pgp({
-    database: 'intro_movies_db_production',
+    database: 'movies_db_production',
     port: 5432,
     host: 'localhost'
   });

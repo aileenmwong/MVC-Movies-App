@@ -1,18 +1,2 @@
-<% include ../partials/boilerplate %>
-
-<a href='/movies/add'>Add a movie!</a>
-
-<div class='movies'>
-  <% moviesData.forEach(function(movie, index) { %>
-    <div>
-      <h3><%= movie.title %></h3>
-      <div>
-        <span><%= movie.release_year %></span>
-        <span><%= movie.director %></span>
-      </div>
-      <a href='/movies/<%= index + 1 %>'>Go to page</a>
-    </div>
-  <% }) %>
-</div>
-
-<% include ../partials/end %>
+<%# as the filename states, this view should render the `index` movie template that lists all movies in the database! %>
+<%# make sure each movie has a button to be deleted from the databse %>
